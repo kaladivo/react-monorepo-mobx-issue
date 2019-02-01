@@ -1,0 +1,41 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.13.0/libexec/bin/yarn.js
+
+PATH: 
+  /Users/davidnovak/.fastlane/bin:/Users/davidnovak/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/davidnovak/.fastlane/bin:/Users/davidnovak/.cargo/bin:/Users/davidnovak/workspace/funCoding/workshop/google-cloud-sdk/bin:/Users/davidnovak/Library/Android/sdk/:/Users/davidnovak/Library/Android/sdk//tools:/Users/davidnovak/Library/Android/sdk//platform-tools:/usr/local/Cellar/python/3.7.0/bin/python3:/Users/davidnovak/Library/Android/sdk/:/Users/davidnovak/Library/Android/sdk//tools:/Users/davidnovak/Library/Android/sdk//platform-tools:/usr/local/Cellar/python/3.7.0/bin/python3
+
+Yarn version: 
+  1.13.0
+
+Node version: 
+  10.13.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/davidnovak/workspace/temp/monorepo-rn/package.json: Unexpected token ' in JSON at position 177
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.13.0/libexec/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.13.0/libexec/lib/cli.js:304:30)
+      at /usr/local/Cellar/yarn/1.13.0/libexec/lib/cli.js:315:13
+
+npm manifest: 
+  {
+    "name": "monorepo-rn",
+    "private": true,
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "workspaces": {
+      "packages": ["packages/**"],
+      "nohoist": ['**/react-native', '**/react-native/**']
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
