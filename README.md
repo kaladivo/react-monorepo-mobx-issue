@@ -1,5 +1,7 @@
 # Unable to configure mobx in monorepo (using yarn workspaces)
 
+This repo was created for [this stackowerflow question](https://stackoverflow.com/questions/54482106/unable-to-configure-mobx-in-monorepo-using-yarn-workspaces)
+
 ## How to replicate
 1. Clone the repo
 2. Run `yarn install`
