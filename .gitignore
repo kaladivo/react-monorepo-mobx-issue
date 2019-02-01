@@ -29,3 +29,8 @@ Temporary Items
 # Others
 node_modules
 .idea
+
+# npm and yarn
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
