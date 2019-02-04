@@ -1,3 +1,6 @@
+# Fixed 
+This issue was ressolved. This repo now contains a working monorepo
+
 # Unable to configure mobx in monorepo (using yarn workspaces)
 
 This repo was created for [this stackowerflow question](https://stackoverflow.com/questions/54482106/unable-to-configure-mobx-in-monorepo-using-yarn-workspaces)
