@@ -35,4 +35,6 @@ I think the problem is with packages and linking them. There are couple of thing
  - Move all dependencies of the shared library into `peerDependencies`
  - Make sure to use `mobx@4.x` so it is compatible with react-native
 
+My yarn version is `1.13.0` (the latest to date)
+
 Any help will be highly appreciated!
