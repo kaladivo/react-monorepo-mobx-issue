@@ -10,7 +10,9 @@
     ],
     "nohoist": [
       "**/react-native",
-      "**/react-native/**"
+      "**/react-native/**",
+      "**/mobx-react/**",
+      "**/mobx-react"
     ]
   },
   "scripts": {

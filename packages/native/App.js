@@ -7,11 +7,10 @@
  * @lint-ignore-every XPLATJSCOPYRIGHT1
  */
 
-import React, {Component} from 'react'
+import React, {Component, type Node} from 'react'
 import {Platform, StyleSheet, Text, View, Button} from 'react-native'
-// import Test from 'calculator'
+import Test from 'test-component'
 import {decorate, observable} from 'mobx'
-import {observer} from 'mobx-react'
 
 const instructions = Platform.select({
 	ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -29,7 +28,8 @@ decorate(Store, {
 	number: observable,
 })
 
-type Props = {}
+type
+Props = {}
 export default class App extends Component<Props> {
 	store = new Store()
 
@@ -39,9 +39,8 @@ export default class App extends Component<Props> {
 				<Text style={styles.welcome}>Welcome to React Native!</Text>
 				<Text style={styles.instructions}>To get started, edit App.js</Text>
 				<Text style={styles.instructions}>{instructions}</Text>
-				<Test clickableComponent={Button} numberElement={Text}/>
-				<Text>{store.number}</Text>
-				<Button onPress={store.number++}>inc</Button>
+				<Test clickableComponent={({onClick, children}: {onClick: () => any, children: string}) => <Button
+					onPress={onClick} title={children}/>} numberElement={Text}/>
 			</View>
 		)
 	}
