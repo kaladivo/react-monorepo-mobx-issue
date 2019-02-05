@@ -10,7 +10,7 @@
 import React, {Component, type Node} from 'react'
 import {Platform, StyleSheet, Text, View, Button} from 'react-native'
 import Test from 'test-component'
-import {decorate, observable} from 'mobx'
+import styled from 'styled-components'
 
 const instructions = Platform.select({
 	ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -24,12 +24,10 @@ class Store {
 	number = 0
 }
 
-decorate(Store, {
-	number: observable,
-})
 
-type
-Props = {}
+const Title = styled.Text``
+
+type Props = {}
 export default class App extends Component<Props> {
 	store = new Store()
 
@@ -41,6 +39,7 @@ export default class App extends Component<Props> {
 				<Text style={styles.instructions}>{instructions}</Text>
 				<Test clickableComponent={({onClick, children}: {onClick: () => any, children: string}) => <Button
 					onPress={onClick} title={children}/>} numberElement={Text}/>
+				<Title>aha</Title>
 			</View>
 		)
 	}
