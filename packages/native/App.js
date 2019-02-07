@@ -11,6 +11,7 @@ import React, {Component, type Node} from 'react'
 import {Platform, StyleSheet, Text, View, Button} from 'react-native'
 import Test from 'test-component'
 import styled from 'styled-components'
+import test from './src'
 
 const instructions = Platform.select({
 	ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -27,7 +28,8 @@ class Store {
 
 const Title = styled.Text``
 
-type Props = {}
+type
+Props = {}
 export default class App extends Component<Props> {
 	store = new Store()
 
@@ -39,7 +41,7 @@ export default class App extends Component<Props> {
 				<Text style={styles.instructions}>{instructions}</Text>
 				<Test clickableComponent={({onClick, children}: {onClick: () => any, children: string}) => <Button
 					onPress={onClick} title={children}/>} numberElement={Text}/>
-				<Title>aha</Title>
+				<Title>{test}</Title>
 			</View>
 		)
 	}
