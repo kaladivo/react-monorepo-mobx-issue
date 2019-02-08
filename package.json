@@ -9,17 +9,13 @@
       "packages/**"
     ],
     "nohoist": [
-      "**/react-native",
-      "**/react-native/**",
-      "**/mobx-react/**",
-      "**/mobx-react",
-      "**/styled-components",
-      "**/styled-components/**"
+      "**/react-native"
     ]
   },
   "scripts": {
     "run:web": "yarn workspace web start",
     "run:native:ios": "yarn workspace nativeapp react-native run-ios",
-    "run:native:android": "yarn workspace nativeapp react-native run-android"
+    "run:native:android": "yarn workspace nativeapp react-native run-android",
+    "prerun:native:android": "cd node_modules/react-native-monorepo-helper && npm i && npm run build"
   }
 }
